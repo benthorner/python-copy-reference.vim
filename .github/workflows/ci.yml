@@ -1,0 +1,10 @@
+name: ci
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: PsychoLlama/vader-action@v1
+        with:
+          test-pattern: 'test/*.vader'
